@@ -2,4 +2,5 @@
 *.o
 *.orig
 *.rej
+dwm
 tmp
