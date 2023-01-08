@@ -18,9 +18,15 @@ static const unsigned int gappov    = 5;         /* vert outer gap between windo
 // static const char *fonts[]       = { "monospace:size=10" };
 // static const char dmenufont[]    = "monospace:size=10";
 
-static const char *fonts[]          = { "Terminus:size=14", "WenQuanYi WenQuanYi Bitmap Song:size=13", "TerminessTTF Nerd Font Mono:size=14" };
-static const char dmenufont[]       = "Terminus:size=14";
+// -----------------
+// Xft.dpi: 96
+// static const char *fonts[]       = { "Terminus:size=14", "WenQuanYi WenQuanYi Bitmap Song:size=13", "TerminessTTF Nerd Font Mono:size=14" };
+// static const char dmenufont[]    = "Terminus:size=14";
 
+// -----------------
+// Xft.dpi: 192
+static const char *fonts[]          = { "Fixedsys Excelsior:size=10", "Microsoft YaHei:size=7:style=bold" };
+static const char dmenufont[]       = "Fixedsys Excelsior:size=10";
 // -------------------------
 // default
 // static const char col_gray1[]    = "#222222";
@@ -118,7 +124,8 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
     /* symbol     arrange function */
-    { "[]=",      tile },    /* first entry is default */
+    // { "[]=",      tile },    /* first entry is default */
+    { "C:/",      tile },    /* first entry is default */
     { "><>",      NULL },    /* no layout function means floating behavior */
     { "[M]",      monocle },
 };
@@ -151,14 +158,14 @@ static const char *morcmenu_cmd[]      = { "morc_menu", NULL};
 
 // scratchpad - alacritty, st - 120x34 / 90x28
 static const char scratchpadname[]     = "scratchpad";
-static const char *scratchpad_cmd[]    = { "st", "-t", scratchpadname, "-g", "90x28", NULL };
+static const char *scratchpad_cmd[]    = { "st", "-t", scratchpadname, "-g", "90x24", NULL };
 
 // tmux scratchpad - alacritty, st - 160x45 / 200x53 / 210x63 / 150x50 / 150x45
 static const char tmuxscratchpadname[] = "tmux-scratchpad";
-static const char *tmux_cmd[]          = { "st", "-t", tmuxscratchpadname, "-g", "150x45", "-e", "tmux", NULL };
+static const char *tmux_cmd[]          = { "st", "-t", tmuxscratchpadname, "-g", "144x40", "-e", "tmux", NULL };
 
 // alsamixer - alacritty, st, terminal - 120x34 / 90x28
-static const char *alsamixer_cmd[]     = { "st", "-t", scratchpadname, "-g", "90x28", "-e", "alsamixer", NULL };
+static const char *alsamixer_cmd[]     = { "st", "-t", scratchpadname, "-g", "90x24", "-e", "alsamixer", NULL };
 
 // flameshot 截图
 // static const char *flameshot_cmd[]     = { "firejail", "--net=none", "flameshot", "gui", NULL};

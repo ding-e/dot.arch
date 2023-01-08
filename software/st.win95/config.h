@@ -10,21 +10,21 @@
 // "Dina:pixelsize=10:antialias=true:autohint=true";
 // "-adobe-helvetica-bold-r-normal--*-120-*-*-*-*-*-*";
 // "-misc-fixed-medium-r-semicondensed--13-120-75-75-c-60-iso10646-1";
-static char *font = "Terminus:pixelsize=18:antialias=true:autohint=true";
 
-/* Spare fonts */
-static char *font2[] = {
-  /*"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true",*/
-  /*"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true",*/
+// -----------------
+// Xft.dpi: 96
+// static char *font    =   "Terminus:pixelsize=18:antialias=true:autohint=true";
+// static char *font2[] = { "WenQuanYi WenQuanYi Bitmap Song:pixelsize=15:antialias=true:autohint=true" };
 
-  //"WenQuanYi WenQuanYi Bitmap Song:pixelsize=13:antialias=true:autohint=true",
-  "WenQuanYi WenQuanYi Bitmap Song:pixelsize=15:antialias=true:autohint=true",
+// -----------------
+// Xft.dpi: 192
+static char *font    =   "Fixedsys Excelsior:pixelsize=28:antialias=true:autohint=true";
+static char *font2[] = { "Microsoft YaHei:pixelsize=19:style=bold:antialias=true:autohint=true" };
 
-  //"xos4 Terminus:pixelsize=12:antialias=true:autohint=true"
-  //"Terminus:pixelsize=12:antialias=true:autohint=true",
-  //"BitstreamVeraSansMono Nerd Font Mono:pixelsize=12:antialias=true:autohint=true",
-  //"Monaco:pixelsize=12:antialias=true:autohint=true",
-};
+/* disable bold, italic and roman fonts globally */
+int disablebold   = 1;
+int disableitalic = 1;
+int disableroman  = 1;
 
 // padding
 static int borderpx = 2;
