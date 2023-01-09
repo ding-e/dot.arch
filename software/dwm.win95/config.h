@@ -16,17 +16,17 @@ static const unsigned int gappov    = 5;         /* vert outer gap between windo
 
 // -------------------------
 // static const char *fonts[]       = { "monospace:size=10" };
-// static const char dmenufont[]    = "monospace:size=10";
+// static const char dmenufont[]    =   "monospace:size=10";
 
 // -----------------
 // Xft.dpi: 96
 // static const char *fonts[]       = { "Terminus:size=14", "WenQuanYi WenQuanYi Bitmap Song:size=13", "TerminessTTF Nerd Font Mono:size=14" };
-// static const char dmenufont[]    = "Terminus:size=14";
+// static const char dmenufont[]    =   "Terminus:size=14";
 
 // -----------------
 // Xft.dpi: 192
 static const char *fonts[]          = { "Fixedsys Excelsior:size=10", "Microsoft YaHei:size=7:style=bold" };
-static const char dmenufont[]       = "Fixedsys Excelsior:size=10";
+static const char dmenufont[]       =   "Fixedsys Excelsior:size=10";
 // -------------------------
 // default
 // static const char col_gray1[]    = "#222222";
@@ -68,7 +68,7 @@ static const unsigned int alphas[][3] = {
 
 /* tagging */
 static const char *tags[]    = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-// static const char *tags[] = { "one", "two", "three", "four", "fire", "six", "seven", "eight", "ten" };
+// static const char *tags[] = { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
 // static const char *tags[] = { "一", "二", "三", "四", "五", "六", "七", "八", "九" };
 // static const char *tags[] = { "main", "web", "code", "irc", "misc", "media"};
 
@@ -81,46 +81,46 @@ static const Rule rules[]    = {
     // { "Gimp",     NULL,       NULL,       0,            0,           1,           -1 },
     // { "Firefox",  NULL,       NULL,       1 << 8,       0,           0,           -1 },
 
-    { "Gimp",     NULL,       NULL,              0,          0,           1,           -1 },
-    { "Firefox",  NULL,       NULL,              0,          1,           0,           -1 },
-    { "Surf",     NULL,       NULL,              0,          1,           1,           -1 },
-    { "Viewnior", NULL,       NULL,              0,          1,           1,           -1 },
-    { "Catfish",  NULL,       NULL,              0,          1,           1,           -1 },
-    { "Godot",    NULL,       NULL,              0,          0,           1,           -1 },
+    { "Gimp",     NULL,       NULL,              0,          0,         1,           -1 },
+    { "Firefox",  NULL,       NULL,              0,          1,         0,           -1 },
+    { "Surf",     NULL,       NULL,              0,          1,         1,           -1 },
+    { "Viewnior", NULL,       NULL,              0,          1,         1,           -1 },
+    { "Catfish",  NULL,       NULL,              0,          1,         1,           -1 },
+    { "Godot",    NULL,       NULL,              0,          0,         1,           -1 },
 
-    { "firefox",  NULL,       "画中画",          0,          0,           1,           -1 },
-    { "Chromium", NULL, "fanyi.youdao.com_/",    0,          1,           1,           -1 },
-    { "Chromium", NULL, "translate.google.cn_/", 0,          1,           1,           -1 },
+    { "firefox",  NULL,    "画中画",             0,          0,         1,           -1 },
+    { "Chromium", NULL, "fanyi.youdao.com_/",    0,          1,         1,           -1 },
+    { "Chromium", NULL, "translate.google.cn_/", 0,          1,         1,           -1 },
 
-    { "Thunar",  NULL,       "文件操作进度",     0,          0,           1,           -1 },
+    { "Thunar",   NULL,    "文件操作进度",       0,          0,         1,           -1 },
 
     // Gnome 解压
-    { "File-roller",        NULL,                NULL, 0,    1,           1,           -1 },
+    { "File-roller",        NULL,                NULL, 0,    1,         1,           -1 },
     // Gnome 计算器
-    { "Gnome-calculator",  "gnome-calculator",   NULL, 0,    1,           1,           -1 },
+    { "Gnome-calculator",  "gnome-calculator",   NULL, 0,    1,         1,           -1 },
     // Gnome 日历
-    { "Gnome-calendar",    "gnome-calendar",     NULL, 0,    1,           1,           -1 },
+    { "Gnome-calendar",    "gnome-calendar",     NULL, 0,    1,         1,           -1 },
     // Gnome 文件管理器 nautilus
-    { "Org.gnome.Nautilus","org.gnome.Nautilus", NULL, 0,    1,           1,           -1 },
+    { "Org.gnome.Nautilus","org.gnome.Nautilus", NULL, 0,    1,         1,           -1 },
     // Gnome 代办事项 todo
-    { "Gnome-todo",        "gnome-todo",         NULL, 0,    1,           1,           -1 },
+    { "Gnome-todo",        "gnome-todo",         NULL, 0,    1,         1,           -1 },
     // Gnome 日志
-    { "Gnome-logs",        "gnome-logs",         NULL, 0,    1,           1,           -1 },
+    { "Gnome-logs",        "gnome-logs",         NULL, 0,    1,         1,           -1 },
     // Gnome 字体查看
-    { "Gnome-font-viewer", "gnome-font-viewer",  NULL, 0,    1,           1,           -1 },
+    { "Gnome-font-viewer", "gnome-font-viewer",  NULL, 0,    1,         1,           -1 },
     // Gnome 磁盘使用情况分析
-    { "Baobab",            "baobab",             NULL, 0,    1,           1,           -1 },
+    { "Baobab",            "baobab",             NULL, 0,    1,         1,           -1 },
     // Gnome 防火墙 gufw
-    { "Gufw.py",           "gufw.py",            NULL, 0,    1,           1,           -1 },
+    { "Gufw.py",           "gufw.py",            NULL, 0,    1,         1,           -1 },
     // Gnome 网络配置
-    { "Nm-connection-editor","nm-connection-editor",NULL, 0, 1,           1,           -1 },
+    { "Nm-connection-editor","nm-connection-editor",NULL, 0, 1,         1,           -1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
-static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
-static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
+static const float mfact        = 0.55; /* factor of master area size [0.05..0.95] */
+static const int nmaster        = 1;    /* number of clients in master area */
+static const int resizehints    = 1;    /* 1 means respect size hints in tiled resizals */
+static const int lockfullscreen = 1;    /* 1 will force focus on the fullscreen window */
 
 static const Layout layouts[] = {
     /* symbol     arrange function */
@@ -144,7 +144,9 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 // -b 屏幕底部:  { "dmenu_run", "-b", ..., NULL };   不加参数 -b，则在顶部
-static const char *dmenucmd[] = { "dmenu_run", "-b", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-b", "-m",  dmenumon,  "-fn", dmenufont,
+                                                     "-nb", col_gray1, "-nf", col_gray3,
+                                                     "-sb", col_cyan,  "-sf", col_gray4, NULL };
 // 默认终端 - alacritty, st
 static const char *termcmd[]  = { "alacritty", NULL };
 
@@ -152,7 +154,7 @@ static const char *termcmd[]  = { "alacritty", NULL };
 // rofi
 // { "rofi", "-show", "run" };
 // { "rofi", "-show", "combi", "-combi-modi", "run#drun#window", "-modi", "combi", NULL};
-static const char *rofi_cmd[]          = { "rofi", "-show", "combi", "-combi-modi", "drun#window", "-modi", "combi", NULL};
+static const char *rofi_cmd[]          = { "rofi", "-show", "combi", "-combi-modi", "drun#window", "-modi", "combi", NULL };
 // launch categorized menu
 static const char *morcmenu_cmd[]      = { "morc_menu", NULL};
 
@@ -168,7 +170,8 @@ static const char *tmux_cmd[]          = { "st", "-t", tmuxscratchpadname, "-g",
 static const char *alsamixer_cmd[]     = { "st", "-t", scratchpadname, "-g", "90x24", "-e", "alsamixer", NULL };
 
 // flameshot 截图
-// static const char *flameshot_cmd[]     = { "firejail", "--net=none", "flameshot", "gui", NULL};
+// = { "firejail", "--net=none", "flameshot", "gui", NULL};
+static const char *flameshot_cmd[]     = { "flameshot", "gui", NULL};
 
 // ==========================================
 // 锁屏 xfce4-screensaver lock screen
@@ -190,47 +193,47 @@ static const char *alsamixer_cmd[]     = { "st", "-t", scratchpadname, "-g", "90
 // { "firefox", "--new-window", "http://fanyi.youdao.com/", ...,  NULL };
 
 // chromium/firefox google/有道 翻译 - 1480 x 900 / 1080,650
-// static const char *chrome_youdao_fanyi_cmd[] = { "firejail", "--private", "chromium", "--window-size=1080,650", "--app=http://fanyi.youdao.com/",  NULL };
-// static const char *chrome_google_fanyi_cmd[] = { "firejail", "--private", "chromium", "--window-size=1080,650", "--app=https://translate.google.cn/",  NULL };
+// = { "firejail", "--private", "chromium", "--window-size=1080,650", "--app=http://fanyi.youdao.com/",  NULL };
+// = { "firejail", "--private", "chromium", "--window-size=1080,650", "--app=https://translate.google.cn/",  NULL };
 static const char *chrome_youdao_fanyi_cmd[] = { "chromium", "--window-size=1480,900", "--app=http://fanyi.youdao.com/",  NULL };
 static const char *chrome_google_fanyi_cmd[] = { "chromium", "--window-size=1480,900", "--app=https://translate.google.cn/",  NULL };
 
 // 因为使用snap 安装的chromium，因此不能再用firejail包装一层运行
-// static const char *chrome_youdao_fanyi_cmd[] = { "/snap/bin/chromium", "--window-size=1080,650", "--app=http://fanyi.youdao.com/",  NULL };
-// static const char *chrome_google_fanyi_cmd[] = { "/snap/bin/chromium", "--window-size=1080,650", "--app=https://translate.google.cn/",  NULL };
-// static const char *firefox_youdao_fanyi_cmd[] = { "/snap/bin/firefox", "--new-window", "http://fanyi.youdao.com/", "--window-size", "1080,650", NULL };
-// static const char *firefox_google_fanyi_cmd[] = { "/snap/bin/firefox", "--new-window", "http://translate.google.cn/", "--window-size", "1080,650", NULL };
+// = { "/snap/bin/chromium", "--window-size=1080,650", "--app=http://fanyi.youdao.com/",  NULL };
+// = { "/snap/bin/chromium", "--window-size=1080,650", "--app=https://translate.google.cn/",  NULL };
 
 // ==========================================
 // 脚本路径 相关命令
-static const char xlock_path[]               = "/home/dinge/.dwm/scripts/slock-lockscreen.sh";
 static const char trayer_path[]              = "/home/dinge/.dwm/scripts/tray-toggle.sh";
-static const char xrandr_multi_path[]        = "/home/dinge/.dwm/scripts/xrandr-multi.sh";
-static const char xrandr_copy_path[]         = "/home/dinge/.dwm/scripts/xrandr-copy.sh";
-static const char xrandr_once_path[]         = "/home/dinge/.dwm/scripts/xrandr-once.sh";
 static const char feh_wpchange_path[]        = "/home/dinge/.dwm/scripts/wp-change.sh";
 static const char dwmstatus_change_path[]    = "/home/dinge/.dwm/scripts/dwm-status/c-toggle-status-type.sh";
-static const char firejail_list_path[]       = "/home/dinge/.dwm/scripts/firejail-list.sh";
-static const char system_info_path[]         = "/home/dinge/.dwm/scripts/dwm-status/dwm-cat-system-status.sh";
 static const char dinge_autostart_path[]     = "/home/dinge/.dwm/scripts/dinge-autostart.sh";
 
-static const char vim_keymap_help_path[]     = "/home/dinge/.dwm/picture/dwm.open/vim-keymap.gif";
-static const char vim_simplenote_help_path[] = "/home/dinge/.dwm/picture/dwm.open/vim-notes.jpg";
+// static const char xlock_path[]            = "/home/dinge/.dwm/scripts/slock-lockscreen.sh";
+// static const char xrandr_multi_path[]     = "/home/dinge/.dwm/scripts/xrandr-multi.sh";
+// static const char xrandr_copy_path[]      = "/home/dinge/.dwm/scripts/xrandr-copy.sh";
+// static const char xrandr_once_path[]      = "/home/dinge/.dwm/scripts/xrandr-once.sh";
+// static const char firejail_list_path[]    = "/home/dinge/.dwm/scripts/firejail-list.sh";
+// static const char system_info_path[]      = "/home/dinge/.dwm/scripts/dwm-status/dwm-cat-system-status.sh";
+
+// static const char vim_keymap_help_path[]     = "/home/dinge/.dwm/picture/dwm.open/vim-keymap.gif";
+// static const char vim_simplenote_help_path[] = "/home/dinge/.dwm/picture/dwm.open/vim-notes.jpg";
 
 // -------------------------
 static const char *trayer_cmd[]              = { trayer_path, NULL };           // 任务栏 - trayer
-static const char *xrandr_multi_cmd[]        = { xrandr_multi_path, NULL };     // xrandr 双显示器，扩展显示
-static const char *xrandr_copy_cmd[]         = { xrandr_copy_path, NULL };      // xrandr 双显示器，镜像显示
-static const char *xrandr_once_cmd[]         = { xrandr_once_path, NULL };      // xrandr 单显示器，禁用另外一台显示器
 static const char *feh_wpchange_cmd[]        = { feh_wpchange_path, NULL };     // feh切换墙纸
-static const char *dwmstatus_change_cmd[]    = { dwmstatus_change_path, NULL }; // 切换dwm状态显示 修改状态类型的number(dwm状态栏) 脚本
-static const char *firejail_list_cmd[]       = { firejail_list_path, NULL };    // 查看firejail --list - 通知弹窗
-static const char *system_info_cmd[]         = { system_info_path, NULL };      // 查看系统状态信息 脚本
-static const char *dinge_autostart_cmd[]     = { dinge_autostart_path, NULL };  // 快速打开软件 脚本
+static const char *dwmstatus_change_cmd[]    = { dwmstatus_change_path, NULL }; // 修改状态类型的number(切换dwm状态栏)
+static const char *dinge_autostart_cmd[]     = { dinge_autostart_path, NULL };  // 快速打开软件
+
+// static const char *xrandr_multi_cmd[]     = { xrandr_multi_path, NULL };     // xrandr 双显示器，扩展显示
+// static const char *xrandr_copy_cmd[]      = { xrandr_copy_path, NULL };      // xrandr 双显示器，镜像显示
+// static const char *xrandr_once_cmd[]      = { xrandr_once_path, NULL };      // xrandr 单显示器，禁用另外一台显示器
+// static const char *firejail_list_cmd[]    = { firejail_list_path, NULL };    // 查看firejail --list - 通知弹窗
+// static const char *system_info_cmd[]      = { system_info_path, NULL };      // 查看系统状态信息 脚本
 
 // 打开vim键位帮助图
-static const char *vim_keymap_help_cmd[]     = { "firejail", "--net=none", "viewnior", vim_keymap_help_path, NULL }; 
-static const char *vim_simplenote_help_cmd[] = { "firejail", "--net=none", "viewnior", vim_simplenote_help_path, NULL };
+// static const char *vim_keymap_help_cmd[]     = { "firejail", "--net=none", "viewnior", vim_keymap_help_path, NULL }; 
+// static const char *vim_simplenote_help_cmd[] = { "firejail", "--net=none", "viewnior", vim_simplenote_help_path, NULL };
 
 // ==========================================
 static const Key keys[] = {
@@ -266,8 +269,7 @@ static const Key keys[] = {
     TAGKEYS(                        XK_7,                      6)
     TAGKEYS(                        XK_8,                      7)
     TAGKEYS(                        XK_9,                      8)
-    // MODKEY|ShiftMask
-    { MODKEY|ShiftMask|ControlMask, XK_q,      quit,           {0} },
+    { MODKEY|ShiftMask|ControlMask, XK_q,      quit,           {0} }, // MODKEY|ShiftMask
 
     // ==========================================
     // rofi menu
@@ -283,36 +285,18 @@ static const Key keys[] = {
     // feh切换墙纸
     { MODKEY|ShiftMask|ControlMask, XK_m,      spawn,          {.v = feh_wpchange_cmd } },
 
+    // flameshot 截图
+    { MODKEY|ControlMask,           XK_a,      spawn,          {.v = flameshot_cmd } },
+
     // chromium/firefox google/youdao 翻译
     { MODKEY|ShiftMask,             XK_r,      spawn,          {.v = chrome_youdao_fanyi_cmd } },
     { MODKEY|ShiftMask|ControlMask, XK_r,      spawn,          {.v = chrome_google_fanyi_cmd } },
 
     // 修改状态类型的number(dwm状态栏) 脚本
     { MODKEY|ShiftMask|ControlMask, XK_s,      spawn,          {.v = dwmstatus_change_cmd } },
-    // 查看firejail --list - 通知弹窗
-    { MODKEY|ShiftMask|ControlMask, XK_f,      spawn,          {.v = firejail_list_cmd } },
-    // 查看系统状态信息 脚本
-    { MODKEY|ShiftMask|ControlMask, XK_d,      spawn,          {.v = system_info_cmd } },
 
     // 快速打开软件 脚本
     { MODKEY|ShiftMask|ControlMask, XK_n,      spawn,          {.v = dinge_autostart_cmd } },
-
-    // 打开vim键位帮助图
-    { MODKEY|ShiftMask|ControlMask, XK_u,      spawn,          {.v = vim_keymap_help_cmd } },
-    { MODKEY|ShiftMask|ControlMask, XK_o,      spawn,          {.v = vim_simplenote_help_cmd } },
-
-    // flameshot 截图
-    // { MODKEY|ControlMask,           XK_a,      spawn,          {.v = flameshot_cmd } },
-
-    // lock screen 锁屏
-    // { MODKEY|ControlMask,           XK_l,      spawn,          {.v = lockscreen_cmd } },
-
-    // xrandr 双显示器，扩展显示
-    // { MODKEY|ShiftMask,             XK_y,      spawn,          {.v = xrandr_multi_cmd } },
-    // xrandr 双显示器，镜像显示
-    // { MODKEY|ShiftMask|ControlMask, XK_y,      spawn,          {.v = xrandr_copy_cmd } },
-    // xrandr 单显示器，禁用另外一台显示器
-    // { MODKEY|ControlMask,           XK_y,      spawn,          {.v = xrandr_once_cmd } },
 
     // ----------------------
     // dwm-awesomebar diff
@@ -353,6 +337,29 @@ static const Key keys[] = {
     { MODKEY,                       XK_r,      togglescratch,      {.v = scratchpad_cmd } },
     // dwm-scratchpad-tmux-DINGE diff - grave键 === ` 键
     { MODKEY,                       XK_grave,  toggletmuxscratch,  {.v = tmux_cmd } },
+
+    // ----------------------
+    // 查看firejail --list - 通知弹窗
+    // { MODKEY|ShiftMask|ControlMask, XK_f,      spawn,          {.v = firejail_list_cmd } },
+    // 查看系统状态信息 脚本
+    // { MODKEY|ShiftMask|ControlMask, XK_d,      spawn,          {.v = system_info_cmd } },
+
+    // ----------------------
+    // 打开vim键位帮助图
+    // { MODKEY|ShiftMask|ControlMask, XK_u,      spawn,          {.v = vim_keymap_help_cmd } },
+    // { MODKEY|ShiftMask|ControlMask, XK_o,      spawn,          {.v = vim_simplenote_help_cmd } },
+
+    // ----------------------
+    // lock screen 锁屏
+    // { MODKEY|ControlMask,           XK_l,      spawn,          {.v = lockscreen_cmd } },
+
+    // ----------------------
+    // xrandr 双显示器，扩展显示
+    // { MODKEY|ShiftMask,             XK_y,      spawn,          {.v = xrandr_multi_cmd } },
+    // xrandr 双显示器，镜像显示
+    // { MODKEY|ShiftMask|ControlMask, XK_y,      spawn,          {.v = xrandr_copy_cmd } },
+    // xrandr 单显示器，禁用另外一台显示器
+    // { MODKEY|ControlMask,           XK_y,      spawn,          {.v = xrandr_once_cmd } },
 
     // ----------------------
     // dwm-vanitygaps diff
