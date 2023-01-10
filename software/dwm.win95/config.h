@@ -322,6 +322,11 @@ static const Key keys[] = {
     { MODKEY,                       XK_o,      viewtoright,    {0} }, // XK_Right
     { MODKEY|ShiftMask,             XK_u,      tagtoleft,      {0} }, // XK_Left
     { MODKEY|ShiftMask,             XK_o,      tagtoright,     {0} }, // XK_Right
+    // 右手快速切換標籤頁
+    { MODKEY,                 XK_bracketleft,  viewtoleft,     {0} }, // XK_Left
+    { MODKEY,                 XK_bracketright, viewtoright,    {0} }, // XK_Right
+    { MODKEY|ShiftMask,       XK_bracketleft,  tagtoleft,      {0} }, // XK_Left
+    { MODKEY|ShiftMask,       XK_bracketright, tagtoright,     {0} }, // XK_Right
 
     // ----------------------
     // dwm-fullscreen diff
