@@ -81,14 +81,17 @@ static const Rule rules[]    = {
     // { "Gimp",     NULL,       NULL,       0,            0,           1,           -1 },
     // { "Firefox",  NULL,       NULL,       1 << 8,       0,           0,           -1 },
 
-    { "Gimp",     NULL,       NULL,              0,          0,         1,           -1 },
     { "Firefox",  NULL,       NULL,              0,          1,         0,           -1 },
+    { "Chromium", NULL,       NULL,              0,          1,         0,           -1 },
     { "Surf",     NULL,       NULL,              0,          1,         1,           -1 },
+
     { "Viewnior", NULL,       NULL,              0,          1,         1,           -1 },
     { "Catfish",  NULL,       NULL,              0,          1,         1,           -1 },
     { "Godot",    NULL,       NULL,              0,          0,         1,           -1 },
+    { "Gimp",     NULL,       NULL,              0,          0,         1,           -1 },
 
-    { "firefox",  NULL,    "画中画",             0,          0,         1,           -1 },
+    // firefox & chromium 视频画中画 浮动
+    { NULL,       NULL,    "画中画",             0,          0,         1,           -1 },
     { "Chromium", NULL, "fanyi.youdao.com_/",    0,          1,         1,           -1 },
     { "Chromium", NULL, "translate.google.cn_/", 0,          1,         1,           -1 },
 
@@ -323,6 +326,8 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,             XK_u,      tagtoleft,      {0} }, // XK_Left
     { MODKEY|ShiftMask,             XK_o,      tagtoright,     {0} }, // XK_Right
     // 右手快速切換標籤頁
+    // XK_bracketleft  : [
+    // XK_bracketright : ]
     { MODKEY,                 XK_bracketleft,  viewtoleft,     {0} }, // XK_Left
     { MODKEY,                 XK_bracketright, viewtoright,    {0} }, // XK_Right
     { MODKEY|ShiftMask,       XK_bracketleft,  tagtoleft,      {0} }, // XK_Left
