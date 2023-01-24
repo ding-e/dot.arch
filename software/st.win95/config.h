@@ -286,10 +286,16 @@ static Shortcut shortcuts[] = {
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 
+	// 上下滾動
 	//{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	//{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 	{ MODKEY|ControlMask,   XK_o,            kscrollup,      {.i =  3} },
 	{ MODKEY|ControlMask,   XK_u,            kscrolldown,    {.i =  3} },
+
+	// 調整字體大小
+	// mod + ctrl + [ / ]
+	{ MODKEY|ControlMask,   XK_bracketleft,  zoom,           {.f = -1} },
+	{ MODKEY|ControlMask,   XK_bracketright, zoom,           {.f = +1} },
 };
 
 /*

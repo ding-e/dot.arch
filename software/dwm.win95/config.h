@@ -170,7 +170,8 @@ static const char tmuxscratchpadname[] = "tmux-scratchpad";
 static const char *tmux_cmd[]          = { "st", "-t", tmuxscratchpadname, "-g", "144x40", "-e", "tmux", NULL };
 
 // alsamixer - alacritty, st, terminal - 120x34 / 90x28
-static const char *alsamixer_cmd[]     = { "st", "-t", scratchpadname, "-g", "90x24", "-e", "alsamixer", NULL };
+// -> st/patches/defaultfontsize.diff -> st -z ${fontsize} -e ${cmd} 可以设置字体大小
+static const char *alsamixer_cmd[]     = { "st", "-z", "34", "-t", scratchpadname, "-g", "90x24", "-e", "alsamixer", NULL };
 
 // flameshot 截图
 // = { "firejail", "--net=none", "flameshot", "gui", NULL};
@@ -217,7 +218,7 @@ static const char dinge_autostart_path[]     = "/home/dinge/.dwm/scripts/dinge-a
 // static const char xrandr_copy_path[]      = "/home/dinge/.dwm/scripts/xrandr-copy.sh";
 // static const char xrandr_once_path[]      = "/home/dinge/.dwm/scripts/xrandr-once.sh";
 // static const char firejail_list_path[]    = "/home/dinge/.dwm/scripts/firejail-list.sh";
-// static const char system_info_path[]      = "/home/dinge/.dwm/scripts/dwm-status/dwm-cat-system-status.sh";
+// static const char system_info_path[]      = "/home/dinge/.dwm/scripts/system-status.sh";
 
 // static const char vim_keymap_help_path[]     = "/home/dinge/.dwm/picture/dwm.open/vim-keymap.gif";
 // static const char vim_simplenote_help_path[] = "/home/dinge/.dwm/picture/dwm.open/vim-notes.jpg";
@@ -326,8 +327,9 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,             XK_u,      tagtoleft,      {0} }, // XK_Left
     { MODKEY|ShiftMask,             XK_o,      tagtoright,     {0} }, // XK_Right
     // 右手快速切換標籤頁
-    // XK_bracketleft  : [
-    // XK_bracketright : ]
+    // xev : 查看键盘按键名称
+    // XK_bracketleft  : [    , XK_semicolon    : ;
+    // XK_bracketright : ]    , XK_apostrophe   : '
     { MODKEY,                 XK_bracketleft,  viewtoleft,     {0} }, // XK_Left
     { MODKEY,                 XK_bracketright, viewtoright,    {0} }, // XK_Right
     { MODKEY|ShiftMask,       XK_bracketleft,  tagtoleft,      {0} }, // XK_Left
