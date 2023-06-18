@@ -36,11 +36,11 @@ static const char dmenufont[]       =   "Fixedsys Excelsior:size=10";
 // static const char col_cyan[]     = "#005577";
 
 // nord
-// static const char col_gray1[]    = "#2E3440"; /* 状态栏      默认   背景色 */
-// static const char col_gray2[]    = "#3B4252"; /* 边框        默认   颜色   */
-// static const char col_gray3[]    = "#E4E8EF"; /* 状态栏字体  默认   颜色   */
-// static const char col_gray4[]    = "#2E3440"; /* 状态栏字体  被选中 颜色   */
-// static const char col_cyan[]     = "#8EBBBA"; /* 边框与背景  被选中 颜色   */
+// static const char col_gray1[]    = "#2E3440";
+// static const char col_gray2[]    = "#3B4252";
+// static const char col_gray3[]    = "#E4E8EF";
+// static const char col_gray4[]    = "#2E3440";
+// static const char col_cyan[]     = "#8EBBBA";
 
 // win95
 static const char col_gray1[]       = "#000000"; /* 状态栏      默认   背景色 */
@@ -161,15 +161,15 @@ static const char *rofi_cmd[]          = { "rofi", "-show", "combi", "-combi-mod
 // launch categorized menu
 static const char *morcmenu_cmd[]      = { "morc_menu", NULL};
 
-// scratchpad - alacritty, st - 120x34 / 90x28
+// scratchpad - alacritty, st
 static const char scratchpadname[]     = "scratchpad";
-static const char *scratchpad_cmd[]    = { "st", "-t", scratchpadname, "-g", "90x24", NULL };
+static const char *scratchpad_cmd[]    = { "st", "-z", "32", "-t", scratchpadname, "-g", "90x24", NULL };
 
-// tmux scratchpad - alacritty, st - 160x45 / 200x53 / 210x63 / 150x50 / 150x45
+// tmux scratchpad - alacritty, st
 static const char tmuxscratchpadname[] = "tmux-scratchpad";
-static const char *tmux_cmd[]          = { "st", "-t", tmuxscratchpadname, "-g", "144x40", "-e", "tmux", NULL };
+static const char *tmux_cmd[]          = { "st", "-z", "32", "-t", tmuxscratchpadname, "-g", "120x35", "-e", "tmux", NULL };
 
-// alsamixer - alacritty, st, terminal - 120x34 / 90x28
+// alsamixer - alacritty, st, terminal
 // -> st/patches/defaultfontsize.diff -> st -z ${fontsize} -e ${cmd} 可以设置字体大小
 static const char *alsamixer_cmd[]     = { "st", "-z", "34", "-t", scratchpadname, "-g", "90x24", "-e", "alsamixer", NULL };
 

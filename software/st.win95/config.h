@@ -19,7 +19,8 @@
 // -----------------
 // Xft.dpi: 192
 static char *font    =   "Fixedsys Excelsior:pixelsize=28:antialias=true:autohint=true";
-static char *font2[] = { "Microsoft YaHei:pixelsize=19:style=bold:antialias=true:autohint=true" };
+// static char *font2[] = { "Microsoft YaHei:pixelsize=19:style=bold:antialias=true:autohint=true" };
+static char *font2[] = { "Microsoft YaHei:pixelsize=21:style=bold:antialias=true:autohint=true" };
 
 /* disable bold, italic and roman fonts globally */
 int disablebold   = 1;
