@@ -43,11 +43,11 @@ static const char dmenufont[]       =   "Fixedsys Excelsior:size=10";
 // static const char col_cyan[]     = "#8EBBBA";
 
 // win95
-static const char col_gray1[]       = "#000000"; /* 状态栏      默认   背景色 */
-static const char col_gray2[]       = "#3B4252"; /* 边框        默认   颜色   */
-static const char col_gray3[]       = "#FFFFFF"; /* 状态栏字体  默认   颜色   */
-static const char col_gray4[]       = "#FFFFFF"; /* 状态栏字体  被选中 颜色   */
-static const char col_cyan[]        = "#000080"; /* 边框与背景  被选中 颜色   */
+static const char col_gray1[]       = "#000000"; /* 状态栏     背景色   */
+static const char col_gray2[]       = "#3B4252"; /* 边框       默认    */
+static const char col_gray3[]       = "#FFFFFF"; /* 状态栏字体  默认    */
+static const char col_gray4[]       = "#FFFFFF"; /* 状态栏字体  被选中  */
+static const char col_cyan[]        = "#000080"; /* 边框与背景  被选中  */
 
 // -------------------------
 // static const unsigned int baralpha = 0xd0;
@@ -68,10 +68,6 @@ static const unsigned int alphas[][3] = {
 
 /* tagging */
 static const char *tags[]    = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-// static const char *tags[] = { "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
-// static const char *tags[] = { "一", "二", "三", "四", "五", "六", "七", "八", "九" };
-// static const char *tags[] = { "main", "web", "code", "irc", "misc", "media"};
-
 static const Rule rules[]    = {
     /* xprop(1):
      *	WM_CLASS(STRING) = instance, class
@@ -91,11 +87,11 @@ static const Rule rules[]    = {
     { "Gimp",     NULL,       NULL,              0,          0,         1,           -1 },
 
     // firefox & chromium 视频画中画 浮动
-    { NULL,       NULL,    "画中画",             0,          0,         1,           -1 },
+    { NULL,       NULL,    "画中画",              0,          0,         1,           -1 },
     { "Chromium", NULL, "fanyi.youdao.com_/",    0,          1,         1,           -1 },
     { "Chromium", NULL, "translate.google.cn_/", 0,          1,         1,           -1 },
 
-    { "Thunar",   NULL,    "文件操作进度",       0,          0,         1,           -1 },
+    { "Thunar",   NULL,    "文件操作进度",         0,          0,         1,           -1 },
 
     // Gnome 解压
     { "File-roller",        NULL,                NULL, 0,    1,         1,           -1 },
@@ -146,11 +142,11 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-// -b 屏幕底部:  { "dmenu_run", "-b", ..., NULL };   不加参数 -b，则在顶部
+// -b 屏幕底部
 static const char *dmenucmd[] = { "dmenu_run", "-b", "-m",  dmenumon,  "-fn", dmenufont,
                                                      "-nb", col_gray1, "-nf", col_gray3,
                                                      "-sb", col_cyan,  "-sf", col_gray4, NULL };
-// 默认终端 - alacritty, st
+// 默认终端
 static const char *termcmd[]  = { "alacritty", NULL };
 
 // ==========================================
@@ -161,30 +157,29 @@ static const char *rofi_cmd[]          = { "rofi", "-show", "combi", "-combi-mod
 // launch categorized menu
 static const char *morcmenu_cmd[]      = { "morc_menu", NULL};
 
-// scratchpad - alacritty, st
+// scratchpad
 static const char scratchpadname[]     = "scratchpad";
 static const char *scratchpad_cmd[]    = { "st", "-z", "32", "-t", scratchpadname, "-g", "90x24", NULL };
-
-// tmux scratchpad - alacritty, st
+// tmux scratchpad
 static const char tmuxscratchpadname[] = "tmux-scratchpad";
 static const char *tmux_cmd[]          = { "st", "-z", "32", "-t", tmuxscratchpadname, "-g", "120x35", "-e", "tmux", NULL };
 
-// alsamixer - alacritty, st, terminal
-// -> st/patches/defaultfontsize.diff -> st -z ${fontsize} -e ${cmd} 可以设置字体大小
+// alsamixer
+// -> st/patches/defaultfontsize.diff -> st -z ${fontsize} -e ${cmd} 设置字体大小
 static const char *alsamixer_cmd[]     = { "st", "-z", "34", "-t", scratchpadname, "-g", "90x24", "-e", "alsamixer", NULL };
 
 // flameshot 截图
-// = { "firejail", "--net=none", "flameshot", "gui", NULL};
+// { "firejail", "--net=none", "flameshot", "gui", NULL};
 static const char *flameshot_cmd[]     = { "flameshot", "gui", NULL};
 
 // ==========================================
 // 锁屏 xfce4-screensaver lock screen
 // { "xfce4-screensaver-command", "--lock", NULL};
-// static const char *lockscreen_cmd[]    = { "firejail", "--private", "--net=none", "xfce4-screensaver-command", "--lock", NULL};
+// static const char *lockscreen_cmd[] = { "xfce4-screensaver-command", "--lock", NULL};
 
 // 锁屏 xlock lock screen
-// static const char *lockscreen_cmd[]        = { "slock", NULL };
-// static const char *lockscreen_cmd[]        = { xlock_path, NULL };
+// static const char *lockscreen_cmd[] = { "slock", NULL };
+// static const char *lockscreen_cmd[] = { xlock_path, NULL };
 
 // ==========================================
 // browser
@@ -202,15 +197,10 @@ static const char *flameshot_cmd[]     = { "flameshot", "gui", NULL};
 static const char *chrome_youdao_fanyi_cmd[] = { "chromium", "--window-size=1480,900", "--app=http://fanyi.youdao.com/",  NULL };
 static const char *chrome_google_fanyi_cmd[] = { "chromium", "--window-size=1480,900", "--app=https://translate.google.cn/",  NULL };
 
-// 因为使用snap 安装的chromium，因此不能再用firejail包装一层运行
-// = { "/snap/bin/chromium", "--window-size=1080,650", "--app=http://fanyi.youdao.com/",  NULL };
-// = { "/snap/bin/chromium", "--window-size=1080,650", "--app=https://translate.google.cn/",  NULL };
-
 // ==========================================
 // 脚本路径 相关命令
 static const char trayer_path[]              = "/home/dinge/.dwm/scripts/tray-toggle.sh";
 static const char feh_wpchange_path[]        = "/home/dinge/.dwm/scripts/wp-change.sh";
-static const char dwmstatus_change_path[]    = "/home/dinge/.dwm/scripts/dwm-status/c-toggle-status-type.sh";
 static const char dinge_autostart_path[]     = "/home/dinge/.dwm/scripts/dinge-autostart.sh";
 
 // static const char xlock_path[]            = "/home/dinge/.dwm/scripts/slock-lockscreen.sh";
@@ -219,6 +209,7 @@ static const char dinge_autostart_path[]     = "/home/dinge/.dwm/scripts/dinge-a
 // static const char xrandr_once_path[]      = "/home/dinge/.dwm/scripts/xrandr-once.sh";
 // static const char firejail_list_path[]    = "/home/dinge/.dwm/scripts/firejail-list.sh";
 // static const char system_info_path[]      = "/home/dinge/.dwm/scripts/system-status.sh";
+// static const char dwmstatus_change_path[] = "/home/dinge/.dwm/scripts/dwm-status/c-toggle-status-type.sh";
 
 // static const char vim_keymap_help_path[]     = "/home/dinge/.dwm/picture/dwm.open/vim-keymap.gif";
 // static const char vim_simplenote_help_path[] = "/home/dinge/.dwm/picture/dwm.open/vim-notes.jpg";
@@ -226,7 +217,6 @@ static const char dinge_autostart_path[]     = "/home/dinge/.dwm/scripts/dinge-a
 // -------------------------
 static const char *trayer_cmd[]              = { trayer_path, NULL };           // 任务栏 - trayer
 static const char *feh_wpchange_cmd[]        = { feh_wpchange_path, NULL };     // feh切换墙纸
-static const char *dwmstatus_change_cmd[]    = { dwmstatus_change_path, NULL }; // 修改状态类型的number(切换dwm状态栏)
 static const char *dinge_autostart_cmd[]     = { dinge_autostart_path, NULL };  // 快速打开软件
 
 // static const char *xrandr_multi_cmd[]     = { xrandr_multi_path, NULL };     // xrandr 双显示器，扩展显示
@@ -234,10 +224,11 @@ static const char *dinge_autostart_cmd[]     = { dinge_autostart_path, NULL };  
 // static const char *xrandr_once_cmd[]      = { xrandr_once_path, NULL };      // xrandr 单显示器，禁用另外一台显示器
 // static const char *firejail_list_cmd[]    = { firejail_list_path, NULL };    // 查看firejail --list - 通知弹窗
 // static const char *system_info_cmd[]      = { system_info_path, NULL };      // 查看系统状态信息 脚本
+// static const char *dwmstatus_change_cmd[] = { dwmstatus_change_path, NULL }; // 修改状态类型的number(切换dwm状态栏)
 
 // 打开vim键位帮助图
-// static const char *vim_keymap_help_cmd[]     = { "firejail", "--net=none", "viewnior", vim_keymap_help_path, NULL }; 
-// static const char *vim_simplenote_help_cmd[] = { "firejail", "--net=none", "viewnior", vim_simplenote_help_path, NULL };
+// static const char *vim_keymap_help_cmd[]     = { "viewnior", vim_keymap_help_path, NULL }; 
+// static const char *vim_simplenote_help_cmd[] = { "viewnior", vim_simplenote_help_path, NULL };
 
 // ==========================================
 static const Key keys[] = {
@@ -296,10 +287,7 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,             XK_r,      spawn,          {.v = chrome_youdao_fanyi_cmd } },
     { MODKEY|ShiftMask|ControlMask, XK_r,      spawn,          {.v = chrome_google_fanyi_cmd } },
 
-    // 修改状态类型的number(dwm状态栏) 脚本
-    { MODKEY|ShiftMask|ControlMask, XK_s,      spawn,          {.v = dwmstatus_change_cmd } },
-
-    // 快速打开软件 脚本
+    // 快速打开软件
     { MODKEY|ShiftMask|ControlMask, XK_n,      spawn,          {.v = dinge_autostart_cmd } },
 
     // ----------------------
@@ -308,13 +296,12 @@ static const Key keys[] = {
     { MODKEY|ShiftMask,             XK_v,      showall,        {0} },
     { MODKEY|ShiftMask|ControlMask, XK_v,      show,           {0} },
 
-    // 当前窗口的应用程序中焦点切换 (以前j为+1，k为-1, 不符合习惯，互换一下)
+    // 当前窗口的应用程序焦点切换
     { MODKEY,                       XK_k,      focusstackvis,  {.i = +1 } },
     { MODKEY,                       XK_j,      focusstackvis,  {.i = -1 } },
     { MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = +1 } },
     { MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = -1 } },
-
-    // 选中 当前窗口下一个程序 / 上一个程序 - 为了纯右手可以切换，多定一个
+    // ----------
     { MODKEY,                       XK_e,      focusstackvis,  {.i = +1 } },
     { MODKEY,                       XK_w,      focusstackvis,  {.i = -1 } },
     { MODKEY|ShiftMask,             XK_e,      focusstackhid,  {.i = +1 } },
@@ -326,7 +313,7 @@ static const Key keys[] = {
     { MODKEY,                       XK_o,      viewtoright,    {0} }, // XK_Right
     { MODKEY|ShiftMask,             XK_u,      tagtoleft,      {0} }, // XK_Left
     { MODKEY|ShiftMask,             XK_o,      tagtoright,     {0} }, // XK_Right
-    // 右手快速切換標籤頁
+    // ----------
     // xev : 查看键盘按键名称
     // XK_bracketleft  : [    , XK_semicolon    : ;
     // XK_bracketright : ]    , XK_apostrophe   : '
@@ -355,6 +342,9 @@ static const Key keys[] = {
     // { MODKEY|ShiftMask|ControlMask, XK_f,      spawn,          {.v = firejail_list_cmd } },
     // 查看系统状态信息 脚本
     // { MODKEY|ShiftMask|ControlMask, XK_d,      spawn,          {.v = system_info_cmd } },
+    // ----------------------
+    // 修改状态类型的number(dwm状态栏) 脚本
+    // { MODKEY|ShiftMask|ControlMask, XK_s,      spawn,          {.v = dwmstatus_change_cmd } },
 
     // ----------------------
     // 打开vim键位帮助图
