@@ -75,11 +75,11 @@ static const Rule rules[]    = {
      */
     /* class      instance    title       tags mask     iscentered   isfloating   monitor */
     // { "Gimp",     NULL,       NULL,       0,            0,           1,           -1 },
-    // { "Firefox",  NULL,       NULL,       1 << 8,       0,           0,           -1 },
+    // { "firefox",  NULL,       NULL,       1 << 8,       0,           0,           -1 },
 
-    { "Firefox",  NULL,       NULL,              0,          1,         0,           -1 },
-    { "Chromium", NULL,       NULL,              0,          1,         0,           -1 },
-    { "Surf",     NULL,       NULL,              0,          1,         1,           -1 },
+    // { "firefox",  NULL,       NULL,              0,          1,         0,           -1 },
+    // { "Chromium", NULL,       NULL,              0,          1,         0,           -1 },
+    // { "Surf",     NULL,       NULL,              0,          1,         1,           -1 },
 
     { "Viewnior", NULL,       NULL,              0,          1,         1,           -1 },
     { "Catfish",  NULL,       NULL,              0,          1,         1,           -1 },
@@ -91,6 +91,7 @@ static const Rule rules[]    = {
     { "Chromium", NULL, "fanyi.youdao.com_/",    0,          1,         1,           -1 },
     { "Chromium", NULL, "translate.google.cn_/", 0,          1,         1,           -1 },
 
+    { "firefox",  NULL,    "我的足迹",            0,          1,         1,           -1 },
     { "Thunar",   NULL,    "文件操作进度",         0,          0,         1,           -1 },
 
     // Gnome 解压
