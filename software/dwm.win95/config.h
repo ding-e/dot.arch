@@ -89,7 +89,7 @@ static const Rule rules[]    = {
     // firefox & chromium 视频画中画 浮动
     { NULL,       NULL,    "画中画",              0,          0,         1,           -1 },
     { "Chromium", NULL, "fanyi.youdao.com_/",    0,          1,         1,           -1 },
-    { "Chromium", NULL, "translate.google.cn_/", 0,          1,         1,           -1 },
+    { "Chromium", NULL, "translate.google.com.hk_/", 0,          1,         1,           -1 },
 
     { "firefox",  NULL,    "我的足迹",            0,          1,         1,           -1 },
     { "Thunar",   NULL,    "文件操作进度",         0,          0,         1,           -1 },
@@ -189,14 +189,16 @@ static const char *flameshot_cmd[]     = { "flameshot", "gui", NULL};
 // static const char *thunar_cmd[]     = { "thunar", NULL};
 
 // { "firefox", "--new-tab",    "https://translate.google.cn/", ...,  NULL };
-// { "firefox", "--new-tab",    "http://fanyi.youdao.com/", ...,  NULL };
-// { "firefox", "--new-window", "http://fanyi.youdao.com/", ...,  NULL };
+// { "firefox", "--new-tab",    "https://fanyi.youdao.com/", ...,  NULL };
+// { "firefox", "--new-window", "https://fanyi.youdao.com/", ...,  NULL };
 
 // chromium/firefox google/有道 翻译 - 1480 x 900 / 1080,650
-// = { "firejail", "--private", "chromium", "--window-size=1080,650", "--app=http://fanyi.youdao.com/",  NULL };
+// = { "firejail", "--private", "chromium", "--window-size=1080,650", "--app=https://fanyi.youdao.com/",  NULL };
 // = { "firejail", "--private", "chromium", "--window-size=1080,650", "--app=https://translate.google.cn/",  NULL };
-static const char *chrome_youdao_fanyi_cmd[] = { "chromium", "--window-size=1480,900", "--app=http://fanyi.youdao.com/",  NULL };
-static const char *chrome_google_fanyi_cmd[] = { "chromium", "--window-size=1480,900", "--app=https://translate.google.cn/",  NULL };
+// static const char *chrome_youdao_fanyi_cmd[] = { "chromium", "--window-size=1480,900", "--app=https://fanyi.youdao.com/",  NULL };
+// static const char *chrome_google_fanyi_cmd[] = { "chromium", "--window-size=1480,900", "--app=https://translate.google.cn/",  NULL };
+static const char *chrome_youdao_fanyi_cmd[] = { "chromium", "--window-size=1080,650", "--app=https://fanyi.youdao.com/",  NULL };
+static const char *chrome_google_fanyi_cmd[] = { "chromium", "--window-size=1080,650", "--app=https://translate.google.com.hk/?hl=zh-CN",  NULL };
 
 // ==========================================
 // 脚本路径 相关命令
